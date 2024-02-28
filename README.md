@@ -2,10 +2,10 @@
 
 
 
-This module enhances the user experience on a Magento 2 website by adding a dynamic title change feature when a product is added to the shopping cart. 
+This module enhances the user experience on a Magento 2 website by adding a dynamic title tab change feature when a product is added to the shopping cart. 
 It utilizes jQuery and Magento_Catalog's built-in functionality to achieve this.
 
-This works for both PDP and PLP
+This works for both PDP and PLP.
 
 How it works:
 
