@@ -1,0 +1,22 @@
+<?php
+/**
+ * @var Magento\Framework\View\Element\Template $block
+ * @var Zvirko\AnimateTitle\ViewModel\Config $viewModel
+ * @var Magento\Framework\Escaper $escaper
+ */
+
+$viewModel = $block->getData('view_model');
+?>
+<div class="js-animationTitleTab"></div>
+
+<script type="text/x-magento-init">
+    {
+        ".js-animationTitleTab": {
+            "Zvirko_AnimateTitle/js/animationTitleTab": {
+             "enable": <?= $escaper->escapeJs($viewModel->ifEnable()) ?>,
+             "animationTitleTabText": "<?= $escaper->escapeJs($viewModel->getAnimationTitleTabText()) ?>",
+             "useValueFromAdmin": "<?= $escaper->escapeJs($viewModel->getValueFromAdmin()) ?>"
+        }
+    }
+}
+</script>

@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="zvirko" translate="label" sortOrder="900">
+            <label>Zvirko</label>
+        </tab>
+        <section id="animationTitleTab" translate="label" sortOrder="130" showInDefault="1" showInWebsite="1"
+                 showInStore="1">
+            <class>separator-top</class>
+            <label>Animation title tab configurations</label>
+            <tab>zvirko</tab>
+            <resource>Zvirko_AnimateTitle::animationTitleTab_config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="0"
+                   showInStore="0">
+                <label>Animation title tab</label>
+                <field id="enable" translate="label" type="select" sortOrder="100" showInDefault="1" canRestore="1">
+                    <label>Enable animation title tab</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="getValueFromAdmin" translate="label" type="select" sortOrder="150" showInDefault="1"
+                       canRestore="1">
+                    <label>Use value from admin</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Do you want to use the text from admin?</comment>
+                </field>
+                <field id="animationTitleTab" translate="label" type="text" sortOrder="200" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <label>Custom text for animation</label>
+                    <comment>The text that the user will see in title tab when adding an item to the cart.
+                        "Use value from admin" should be enabled.
+                    </comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
