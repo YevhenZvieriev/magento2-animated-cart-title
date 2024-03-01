@@ -1,6 +1,6 @@
 {
     "name": "zvirko/module-animate-title",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "This module animates the tab title when adding a product to the cart",
     "type": "magento2-module",
     "require": {

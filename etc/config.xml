@@ -4,8 +4,9 @@
     <default>
         <animationTitleTab>
             <general>
-                <enable>0</enable>
+                <enabled>0</enabled>
                 <getValueFromAdmin>0</getValueFromAdmin>
+                <duration>5</duration>
             </general>
         </animationTitleTab>
     </default>

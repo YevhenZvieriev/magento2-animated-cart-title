@@ -2,13 +2,13 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
-        <script src="Zvirko_AnimateTitle::js/animationTitleTab.js"/>
+        <script src="Zvirko_AnimationTitleTab::js/animationTitleTab.js"/>
     </head>
     <body>
         <referenceContainer name="content">
-            <block template="Zvirko_AnimateTitle::config.phtml">
+            <block template="Zvirko_AnimationTitleTab::config.phtml">
                 <arguments>
-                    <argument name="view_model" xsi:type="object">Zvirko\AnimateTitle\ViewModel\Config</argument>
+                    <argument name="view_model" xsi:type="object">Zvirko\AnimationTitleTab\ViewModel\Config</argument>
                 </arguments>
             </block>
         </referenceContainer>
