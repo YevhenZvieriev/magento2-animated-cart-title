@@ -30,7 +30,6 @@
                        showInWebsite="0" showInStore="0" canRestore="1">
                     <label>Custom text for animation</label>
                     <comment>The text that the user will see in title tab when adding an item to the cart.
-                        "Use value from admin" should be enabled.
                     </comment>
                     <depends>
                         <field id="getValueFromAdmin">1</field>
