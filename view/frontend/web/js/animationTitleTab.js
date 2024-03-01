@@ -11,9 +11,9 @@ define([
 
         $(document).ready(function () {
             let originalTitle = document.title;
-            console.log(config.animationTitleTabText)
-            console.log(config.enable)
-            console.log(config.useValueFromAdmin)
+            let newTitle = '';
+            let animationDuration = config.animationDuration * 1000;
+
             $('body').on('click', '.action.tocart.primary', function () {
                 let productName = '';
                 let page_title = $('.product-info-main .page-title-wrapper .page-title');
@@ -26,7 +26,6 @@ define([
                     productName = product_item_link.text().trim();
                 }
 
-                let newTitle = '';
                 if (config.useValueFromAdmin === '1' && config.animationTitleTabText !== '') {
                     newTitle = config.animationTitleTabText + ' ';
                 } else {
@@ -38,7 +37,7 @@ define([
                 function animateTitle(
                     newTitle,
                     originalTitle,
-                    duration = 5000,
+                    duration,
                     interval = 100
                 ) {
                     let index = 0;
@@ -50,18 +49,18 @@ define([
                     setTimeout(function () {
                         clearInterval(animationInterval);
                         document.title = originalTitle; // Restore the original page title
-                    }, duration);
+                    }, animationDuration);
                 }
 
                 function startTitleAnimation(
                     newTitle,
                     originalTitle,
                     delay = 1000,
-                    duration = 5000,
+                    duration,
                     interval = 100
                 ) {
                     setTimeout(function () {
-                        animateTitle(newTitle, originalTitle, duration, interval);
+                        animateTitle(newTitle, originalTitle, animationDuration, interval);
                     }, delay);
                 }
 

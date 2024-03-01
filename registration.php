@@ -5,6 +5,6 @@ use Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'Zvirko_AnimateTitle',
+    'Zvirko_AnimationTitleTab',
     __DIR__
 );

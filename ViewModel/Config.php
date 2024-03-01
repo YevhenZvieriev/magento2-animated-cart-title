@@ -1,18 +1,20 @@
 <?php
 declare(strict_types=1);
 
-namespace Zvirko\AnimateTitle\ViewModel;
+namespace Zvirko\AnimationTitleTab\ViewModel;
 
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 
  class Config implements ArgumentInterface
 {
-    const ENABLED_PATH = 'animationTitleTab/general/enable';
+    const ENABLED_PATH = 'animationTitleTab/general/enabled';
 
     const ANIMATION_TITLE_TAB_TEXT = 'animationTitleTab/general/animationTitleTab';
 
     const VALUE_FROM_ADMIN = 'animationTitleTab/general/getValueFromAdmin';
+
+    const ANIMATION_DURATION = 'animationTitleTab/general/duration';
 
      /**
       * @var ScopeConfigInterface
@@ -48,5 +50,10 @@ use Magento\Framework\View\Element\Block\ArgumentInterface;
      public function getValueFromAdmin(): mixed
      {
          return $this->scopeConfig->getValue(self::VALUE_FROM_ADMIN);
+     }
+
+     public function getAnimationDuration(): mixed
+     {
+         return $this->scopeConfig->getValue(self::ANIMATION_DURATION);
      }
 }
