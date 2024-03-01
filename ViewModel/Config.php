@@ -6,15 +6,19 @@ namespace Zvirko\AnimationTitleTab\ViewModel;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 use Magento\Framework\View\Element\Block\ArgumentInterface;
 
+/**
+ * Class Config
+ * @package Zvirko\AnimateTitleTab\ViewModel
+ */
  class Config implements ArgumentInterface
 {
-    const ENABLED_PATH = 'animationTitleTab/general/enabled';
+    const PATH_CONFIG_ENABLE = 'animationTitleTab/general/enabled';
 
-    const ANIMATION_TITLE_TAB_TEXT = 'animationTitleTab/general/animationTitleTab';
+    const PATH_CONFIG_ANIMATION_TITLE_TAB_TEXT = 'animationTitleTab/general/animationTitleTab';
 
-    const VALUE_FROM_ADMIN = 'animationTitleTab/general/getValueFromAdmin';
+    const PATH_CONFIG_VALUE_FROM_ADMIN = 'animationTitleTab/general/getValueFromAdmin';
 
-    const ANIMATION_DURATION = 'animationTitleTab/general/duration';
+    const PATH_CONFIG_ANIMATION_DURATION = 'animationTitleTab/general/duration';
 
      /**
       * @var ScopeConfigInterface
@@ -22,8 +26,7 @@ use Magento\Framework\View\Element\Block\ArgumentInterface;
     public ScopeConfigInterface $scopeConfig;
 
     public function __construct(
-        ScopeConfigInterface $scopeConfig,
-        array $data = []
+        ScopeConfigInterface $scopeConfig
     ) {
         $this->scopeConfig = $scopeConfig;
     }
@@ -33,7 +36,7 @@ use Magento\Framework\View\Element\Block\ArgumentInterface;
       */
     public function ifEnable(): mixed
     {
-        return $this->scopeConfig->getValue(self::ENABLED_PATH);
+        return $this->scopeConfig->getValue(self::PATH_CONFIG_ENABLE);
     }
 
      /**
@@ -41,7 +44,7 @@ use Magento\Framework\View\Element\Block\ArgumentInterface;
       */
     public function getAnimationTitleTabText(): mixed
     {
-        return $this->scopeConfig->getValue(self::ANIMATION_TITLE_TAB_TEXT);
+        return $this->scopeConfig->getValue(self::PATH_CONFIG_ANIMATION_TITLE_TAB_TEXT);
     }
 
      /**
@@ -49,11 +52,14 @@ use Magento\Framework\View\Element\Block\ArgumentInterface;
       */
      public function getValueFromAdmin(): mixed
      {
-         return $this->scopeConfig->getValue(self::VALUE_FROM_ADMIN);
+         return $this->scopeConfig->getValue(self::PATH_CONFIG_VALUE_FROM_ADMIN);
      }
 
+     /**
+      * @return mixed
+      */
      public function getAnimationDuration(): mixed
      {
-         return $this->scopeConfig->getValue(self::ANIMATION_DURATION);
+         return $this->scopeConfig->getValue(self::PATH_CONFIG_ANIMATION_DURATION);
      }
 }

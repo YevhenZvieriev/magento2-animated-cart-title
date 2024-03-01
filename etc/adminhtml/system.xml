@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="zvirko" translate="label" sortOrder="900">
             <label>Zvirko</label>
@@ -23,6 +22,9 @@
                     <label>Use value from admin</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Do you want to use the text from admin?</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
                 </field>
                 <field id="animationTitleTab" translate="label" type="text" sortOrder="200" showInDefault="1"
                        showInWebsite="0" showInStore="0" canRestore="1">
@@ -30,11 +32,18 @@
                     <comment>The text that the user will see in title tab when adding an item to the cart.
                         "Use value from admin" should be enabled.
                     </comment>
+                    <depends>
+                        <field id="getValueFromAdmin">1</field>
+                        <field id="enabled">1</field>
+                    </depends>
                 </field>
                 <field id="duration" translate="label" type="text" sortOrder="250" showInDefault="1"
                        showInWebsite="0" showInStore="0" canRestore="1">
                     <label>Animation duration</label>
                     <comment>Choose the duration of the animation in seconds</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
                 </field>
             </group>
         </section>
