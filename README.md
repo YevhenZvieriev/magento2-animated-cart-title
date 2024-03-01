@@ -26,4 +26,5 @@ The module introduces functionality for animating the title tab in Magento 2. Th
 
 You can also change the animation duration from the Admin Page. The default value is 5 seconds. Feel free to change this :) 
 
-[Screencast from 2024-03-01 15-25-50.webm](https://github.com/YevhenZvieriev/magento2-animation-title-tab/assets/43544955/7059a40c-4061-4bfd-baa3-8f1ef8628722)
+[Screencast from 2024-03-01 15-38-10.webm](https://github.com/YevhenZvieriev/magento2-animation-title-tab/assets/43544955/37cb269e-48b9-4d87-942f-3148d4a6ab7a)
+
