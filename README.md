@@ -28,3 +28,10 @@ You can also change the animation duration from the Admin Page. The default valu
 
 [Screencast from 2024-03-01 15-38-10.webm](https://github.com/YevhenZvieriev/magento2-animation-title-tab/assets/43544955/37cb269e-48b9-4d87-942f-3148d4a6ab7a)
 
+## Installation
+
+```
+composer require zvirko/module-animate-title
+bin/magento module:enable Zvirko_AnimationTitleTab
+bin/magento setup:upgrade
+```
